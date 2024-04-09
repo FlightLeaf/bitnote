@@ -1,41 +1,477 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 样式表文件 -->
+    <meta charset="utf-8">
+    <title>BitNote——基于Flutter与Towhee技术的音乐APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="static/assets/images/start.png" type="image/png">
+    <link rel="stylesheet" href="static/assets/css/animate.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="static/assets/css/lineicons.css">
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/default.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>My Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
-    <main>
-        <section class="blog-post">
-            <h2>Blog Post Title</h2>
-            <p class="post-meta">Posted on <time datetime="2023-12-11">December 11, 2023</time> by John Doe</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu mollis nulla. Sed auctor risus id erat placerat, et luctus erat commodo. Sed dapibus nisl vel vulputate lobortis. Vestibulum fringilla metus nec tortor tincidunt, eget ultrices est hendrerit. Aenean vulputate lacus ac mi gravida lobortis. Donec sodales maximus sollicitudin.</p>
-            <a href="#" class="read-more">Read More</a>
-        </section>
+<!--====== PRELOADER PART START ======-->
 
-        <section class="blog-post">
-            <h2>Another Blog Post Title</h2>
-            <p class="post-meta">Posted on <time datetime="2023-12-10">December 10, 2023</time> by Jane Smith</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu mollis nulla. Sed auctor risus id erat placerat, et luctus erat commodo. Sed dapibus nisl vel vulputate lobortis. Vestibulum fringilla metus nec tortor tincidunt, eget ultrices est hendrerit. Aenean vulputate lacus ac mi gravida lobortis. Donec sodales maximus sollicitudin.</p>
-            <a href="#" class="read-more">Read More</a>
-        </section>
-    </main>
+<div class="preloader">
+    <div class="loader">
+        <div class="ytp-spinner">
+            <div class="ytp-spinner-container">
+                <div class="ytp-spinner-rotator">
+                    <div class="ytp-spinner-left">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                    <div class="ytp-spinner-right">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <footer>
-        <p>&copy; 2023 My Blog. All rights reserved.</p>
-    </footer>
+<!--====== PRELOADER PART ENDS ======-->
+
+<!--====== HEADER PART START ======-->
+
+<header class="header-area">
+    <div class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">
+                            <img src="static/assets/images/logo.png" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="page-scroll" href="#home">主页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#why">优势</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#about">听音识曲</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#features">架构</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#screenshots">UI设计</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#download">下载</a>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar collapse -->
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- navbar area -->
+
+    <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-between">
+                <div class="col-lg-6 col-md-10">
+                    <div class="header-hero-content">
+                        <h3 class="header-title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s"><span>BitNote</span><br>沉浸式音乐体验 </h3>
+                        <p class="text wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">音乐，有人将它比作花朵，因为它铺满在人生的道路，散发出不绝的芬芳，把生活装饰得更美。</p>
+                        <ul class="d-flex">
+                            <li><a href="static/assets/BitNote.apk" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">立即下载</a></li>
+                            <li><a href="static/assets/video.mp4" class="header-video video-popup wow fadeInLeftBig" data-wow-duration=1.3s data-wow-delay=1.2s><i class="lni lni-play"></i></a></li>
+                        </ul>
+                    </div> <!-- header hero content -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-10">
+                    <div class="header-image">
+                        <img src="static/assets/images/head-main.jpg" alt="app" class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="image-shape wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                            <img src="static/assets/images/image-shape.svg" alt="shape">
+                        </div>
+                    </div> <!-- header image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="header-shape-1"></div> <!-- header shape -->
+        <div class="header-shape-2">
+            <img src="static/assets/images/header-shape-2.svg" alt="shape">
+        </div> <!-- header shape -->
+    </div> <!-- header hero -->
+</header>
+
+<!--====== HEADER PART ENDS ======-->
+
+<!--====== SERVICES PART START ======-->
+
+<section id="why" class="services-area pt-110 pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-title text-center pb-25">
+                    <h3 class="title">为什么选择BitNote?</h3>
+                    <p class="text">这是一款专注于音乐本身的 APP，致力于为用户创造更加沉浸的音乐享受。它致力于为用户提供一站式的音乐体验，包括但不限于音乐推荐、高效音乐搜索、流畅音乐播放、便捷音乐收藏、精彩视频播放以及智能听音识曲等功能。</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services services-color-1 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    <div class="services-icon d-flex align-items-center justify-content-center">
+                        <i class="lni lni-search"></i>
+                    </div>
+                    <div class="services-content">
+                        <h4 class="services-title"><a href="#">音乐搜索</a></h4>
+                        <p class="text">BitNote提供精准的音乐、歌手、专辑、视频以及歌词搜索功能。</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services services-color-2 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                    <div class="services-icon d-flex align-items-center justify-content-center">
+                        <i class="lni lni-music"></i>
+                    </div>
+                    <div class="services-content">
+                        <h4 class="services-title"><a href="#">听音识曲</a></h4>
+                        <p class="text">BitNote的听音识曲模型通过基于音频特征向量的高效检索实现。</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services services-color-3 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                    <div class="services-icon d-flex align-items-center justify-content-center">
+                        <i class="lni lni-list"></i>
+                    </div>
+                    <div class="services-content">
+                        <h4 class="services-title"><a href="#">智能推荐</a></h4>
+                        <p class="text">BitNote通过大数据分析以及用户喜好推荐适合用户的音乐。</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services services-color-4 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <div class="services-icon d-flex align-items-center justify-content-center">
+                        <i class="lni lni-heart"></i>
+                    </div>
+                    <div class="services-content">
+                        <h4 class="services-title"><a href="#">沉浸享受</a></h4>
+                        <p class="text">BitNode通过可以滑动的音乐Card为用户提供更加沉浸式的音乐体验。</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== SERVICES PART ENDS ======-->
+
+<!--====== ABOUT PART START ======-->
+
+<section id="about" class="about-area pt-70 pb-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                    <div class="about-shape"></div>
+                    <img class="app" src="static/assets/images/about-app.png" alt="app">
+                </div> <!-- about image -->
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <h3 class="title">听音识曲</h3>
+                        <p class="text">BitNote的听音识曲模型通过基于音频特征向量的高效检索实现。该模型主要利用了Towhee进行音频特征提取，以及Milvus进行特征向量的存储和检索。该模型首先通过Towhee中的预训练深度学习模型提取音频片段的特征，得到固定大小的特征向量表示。</p>
+                    </div> <!-- section title -->
+                    <a href="static/assets/BitNote.apk" class="main-btn">立即下载</a>
+                </div> <!-- about content -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== ABOUT PART ENDS ======-->
+
+
+<section id=features class="features-area pt-110">
+    <div class=container>
+        <div class="row justify-content-center">
+            <div class=col-lg-7>
+                <div class="section-title text-center pb-25">
+                    <h3 class=title><span style="color: #2e82ef" >架构</span> </h3>
+                    <p class=text>BitNote 是一款基于跨平台框架 Flutter 开发，使用 Dart 语言实现的音乐APP。</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class=col-lg-6>
+                <div class=features-items>
+                    <div class="single-features features-color-1 d-sm-flex mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.2s>
+                        <div class="features-icon d-flex justify-content-center align-items-center"> <i class="lni lni-google"></i> </div>
+                        <div class="features-content media-body">
+                            <h4 class=features-title><span style="color: #2e82ef" >Flutter</span> 构建</h4>
+                            <p class=text>BitNote 是一款基于跨平台框架 Flutter 开发，使用 Dart 语言实现的音乐APP。</p>
+                        </div>
+                    </div>
+                    <div class="single-features features-color-2 d-sm-flex mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.4s>
+                        <div class="features-icon d-flex justify-content-center align-items-center"> <i class="lni lni-world"></i> </div>
+                        <div class="features-content media-body">
+                            <h4 class=features-title><span style="color: #2e82ef" >ToWhee</span> 模型</h4>
+                            <p class=text>模型主要利用了Towhee进行音频特征提取，以及Milvus进行特征向量的存储和检索。</p>
+                        </div>
+                    </div>
+                    <div class="single-features features-color-3 d-sm-flex mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.6s>
+                        <div class="features-icon d-flex justify-content-center align-items-center"> <i class="lni lni-music"></i> </div>
+                        <div class="features-content media-body">
+                            <h4 class=features-title>音乐 <span style="color: #2e82ef" >Card</span></h4>
+                            <p class=text>用户可以随着自己的心情滑动手指，穿越于不同的音乐时空，感受音乐带来的情感共鸣。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="features-image wow fadeInRightBig" data-wow-duration=1.3s data-wow-delay=0.5s> <img class=image src="static/assets/images/features-app.png" alt=App>
+                    <div class=features-shape-1></div>
+                    <div class=features-shape-2> <img class=svg src="static/assets/images/features-shape-1.svg" alt=""> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id=screenshots class="screenshots-area pt-110 pb-120">
+    <div class=container>
+        <div class="row justify-content-center">
+            <div class=col-lg-7>
+                <div class="section-title text-center pb-45">
+                    <h3 class=title>App UI</h3>
+                    <p class=text>Flutter 的 UI 设计严格遵循 Material Design 设计原则，打造出既丰富多样又独特美观的界面。其动画和转场效果如丝般流畅，为用户带来自然愉悦的操作体验。</p>
+                </div>
+            </div>
+        </div>
+        <div class=row>
+            <div class=col-lg-12>
+                <div class=screenshot-slider>
+                    <div class=swiper-container>
+                        <div class=swiper-wrapper>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-1.jpg" alt=screenshot> </div>
+                            </div>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-2.jpg" alt=screenshot> </div>
+                            </div>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-3.jpg" alt=screenshot> </div>
+                            </div>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-4.jpg" alt=screenshot> </div>
+                            </div>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-5.jpg" alt=screenshot> </div>
+                            </div>
+                            <div class=swiper-slide>
+                                <div class=slider-image> <img src="static/assets/images/screenshot-7.jpg" alt=screenshot> </div>
+                            </div>
+                        </div>
+                        <div class=swiper-pagination></div>
+                        <div class="screenshot-frame d-none d-sm-block"> <img src="static/assets/images/app-frame.png" alt=frame> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--====== DOWNLOAD PART START ======-->
+
+<section id="download" class="download-area pt-70 pb-40">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-9">
+                <div class="download-image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    <img class="image" src="static/assets/images/download-app.png" alt="download">
+
+                    <div class="download-shape-1"></div>
+                    <div class="download-shape-2">
+                        <img class="svg" src="static/assets/images/download-shape.svg" alt="shape">
+                    </div>
+                </div> <!-- download image -->
+            </div>
+            <div class="col-lg-6">
+                <div class="download-content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                    <h3 class="download-title">开始下载使用吧！</h3>
+                    <p class="text">音乐，是人生最大的快乐；音乐，是生活的一股清泉；音乐，是陶冶性情的熔炉。</p>
+                    <ul>
+                        <li><a class="app-store" href="static/assets/BitNote.apk"><img src="static/assets/images/app-store.png" alt="store"></a></li>
+                    </ul>
+                </div> <!-- download image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== DOWNLOAD PART ENDS ======-->
+
+<!--====== PART START ======-->
+
+<footer id="footer" class="footer-area">
+
+    <div class="footer-shape shape-1"></div>
+    <div class="footer-shape shape-2"></div>
+    <div class="footer-shape shape-3"></div>
+    <div class="footer-shape shape-4"></div>
+    <div class="footer-shape shape-5"></div>
+    <div class="footer-shape shape-6"></div>
+    <div class="footer-shape shape-7"></div>
+    <div class="footer-shape shape-8">
+        <img class="svg" src="static/assets/images/footer-shape.svg" alt="Shape">
+    </div>
+
+    <div class="footer-widget pt-30 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <a class="logo" href="#" >
+                            <img src="static/assets/images/logo.png" alt="Logo">
+                        </a>
+                        <p class="text">BitNote采用Flutter框架和Towhee技术，注重音乐本身的纯粹性，提供沉浸式音乐体验，完全免费使用，音乐来源：网易云20%开源音乐80%</p>
+                        <ul class="social">
+                            <li><a href="#"><i class="lni lni-wechat"></i></a></li>
+                            <li><a href="#"><i class="lni lni-android"></i></a></li>
+                            <li><a href="#"><i class="lni lni-windows"></i></a></li>
+                            <li><a href="#"><i class="lni lni-ubuntu"></i></a></li>
+                        </ul>
+                    </div> <!-- footer about -->
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-link d-flex flex-wrap">
+                        <div class="footer-link-wrapper mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                            <div class="footer-title">
+                                <h4 class="title">快速链接</h4>
+                            </div>
+                            <ul class="link">
+                                <li><a class="" href="#home">主页</a></li>
+                                <li><a class="" href="#why">优势</a></li>
+                                <li><a class="" href="#features">架构</a></li>
+                                <li><a class="" href="#screenshots">UI设计</a></li>
+                                <li><a class="" href="#download">下载</a></li>
+                            </ul>
+                        </div> <!-- footer link wrapper -->
+
+                        <div class="footer-link-wrapper mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                            <div class="footer-title">
+                                <h4 class="title">支持</h4>
+                            </div>
+                            <ul class="link">
+                                <li><a class="" href="#">反馈</a></li>
+                                <li><a class="" href="#">法律、法规</a></li>
+                                <li><a class="" href="#">使用介绍</a></li>
+                                <li><a class="" href="#">规则</a></li>
+                                <li><a class="" href="#">站点</a></li>
+                            </ul>
+                        </div> <!-- footer link wrapper -->
+                    </div> <!-- footer link -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="footer-title">
+                            <h4 class="title">联系我们</h4>
+                        </div>
+                        <ul class="contact-list">
+                            <li>
+                                <div class="contact-info d-flex">
+                                    <div class="info-content media-body">
+                                        <p class="text"><i class="lni lni-phone"></i> +8617860709560</p>
+                                    </div>
+                                </div> <!-- contact info -->
+                            </li>
+                            <li>
+                                <div class="contact-info d-flex">
+                                    <div class="info-content media-body">
+                                        <p class="text"><a href="#"><i class="lni lni-envelope"></i> 718856370@qq.com</a></p>
+                                    </div>
+                                </div> <!-- contact info -->
+                            </li>
+                            <li>
+                                <div class="contact-info d-flex">
+                                    <div class="info-content media-body">
+                                        <p class="text"><a href="#"><i class="lni lni-world"></i> www.bitmusic.top</a></p>
+                                    </div>
+                                </div> <!-- contact info -->
+                            </li>
+                            <li>
+                                <div class="contact-info d-flex">
+                                    <div class="info-content media-body">
+                                        <p class="text"><i class="lni lni-map"></i> 中国 青岛</p>
+                                    </div>
+                                </div> <!-- contact info -->
+                            </li>
+                        </ul> <!-- contact list -->
+                    </div> <!-- footer contact -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- footer widget -->
+
+
+</footer>
+
+<!--====== PART ENDS ======-->
+
+<!--====== BACK TOP TOP PART START ======-->
+
+<a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+<!--====== Jquery js ======-->
+<script src="static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="static/assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+<!--====== Bootstrap js ======-->
+<script src="static/assets/js/popper.min.js"></script>
+<script src="static/assets/js/bootstrap.min.js"></script>
+
+<script src="static/assets/js/slick.min.js"></script>
+<script src="static/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="static/assets/js/swiper.min.js"></script>
+
+
+<!--====== WOW js ======-->
+<script src="static/assets/js/wow.min.js"></script>
+
+
+<!--====== Scrolling Nav js ======-->
+<script src="static/assets/js/jquery.easing.min.js"></script>
+<script src="static/assets/js/scrolling-nav.js"></script>
+
+<!--====== Main js ======-->
+<script src="static/assets/js/main.js"></script>
+
 </body>
+
 </html>
